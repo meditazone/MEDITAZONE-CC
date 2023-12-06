@@ -10,7 +10,7 @@ const findUserByEmail = (email) => {
         where: {
             email: email
         }
-    })
+    });
 }
 
 const findUserById = (id) => {
@@ -30,4 +30,4 @@ module.exports = {
     findUserByEmail,
     findUserById,
     logoutUser,
-}
+};
