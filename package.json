@@ -1,0 +1,42 @@
+{
+  "name": "app-meditazone",
+  "version": "1.0.0",
+  "description": "Meditazone BackEnd App Cloud Computing Services",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "NODE_ENV=production node app.js",
+    "test": "mocha ./src/tests/test.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meditazone/MEDITAZONE-CC.git"
+  },
+  "author": "Tri Nugroho Yosef Irawan, Rio Ferdinand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meditazone/MEDITAZONE-CC/issues"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.7.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "keyv": "^4.5.4",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.5",
+    "sequelize": "^6.35.1",
+    "yarn": "^1.22.21"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2"
+  }
+}
