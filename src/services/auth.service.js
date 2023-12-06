@@ -1,11 +1,11 @@
 const UserModel = require('../models/user.model');
 const cacheUtil = require('../utils/cache.util');
 
-exports.createUser = (user) => {
+const createUser = (user) => {
     return UserModel.create(user);
 }
 
-exports.findUserByEmail = (email) => {
+const findUserByEmail = (email) => {
     return UserModel.findOne({
         where: {
             email: email
@@ -13,14 +13,21 @@ exports.findUserByEmail = (email) => {
     })
 }
 
-exports.findUserById = (id) => {
+const findUserById = (id) => {
     return UserModel.findByPk(id);
 }
 
-exports.logoutUser = (token, exp) => {
+const logoutUser = (token, exp) => {
     const now = new Date();
     const expire = new Date(exp * 1000);
     const milliseconds = expire.getTime() - now.getTime();
     
     return cacheUtil.set(token, token, milliseconds);
+}
+
+module.exports = {
+    createUser,
+    findUserByEmail,
+    findUserById,
+    logoutUser,
 }

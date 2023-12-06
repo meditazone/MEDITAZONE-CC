@@ -3,7 +3,8 @@ const jwtConfig = require('../config/jwt.config');
 const bcryptUtil = require('../utils/bcrypt.util');
 const jwtUtil = require('../utils/jwt.util');
 
-exports.register = async (req, res) => { 
+const signUp = async (req, res) => { 
+    
     const isExist = await AuthService.findUserByEmail(req.body.email);
     if(isExist) {
         return res.status(400).json({ 
@@ -23,7 +24,7 @@ exports.register = async (req, res) => {
     });
 }
 
-exports.login = async (req, res) => { 
+const signIn = async (req, res) => { 
     const user = await AuthService.findUserByEmail(req.body.email); 
     if (user) {
         const isMatched = await bcryptUtil.compareHash(req.body.password, user.password);
@@ -39,7 +40,7 @@ exports.login = async (req, res) => {
     return res.status(400).json({ message: 'Unauthorized.' });
 }
 
-exports.getUser = async (req, res) => {
+const getUser = async (req, res) => {
     const user = await AuthService.findUserById(req.user.id);  
     return res.json({
         data: user,
@@ -47,7 +48,14 @@ exports.getUser = async (req, res) => {
     });
 }
 
-exports.logout = async (req, res) => {    
+const logOut = async (req, res) => {    
     await AuthService.logoutUser(req.token, req.user.exp);  
     return res.json({ message: 'Logged out successfully.' });
+}
+
+module.exports = {
+    signUp,
+    signIn,
+    getUser,
+    logOut,
 }

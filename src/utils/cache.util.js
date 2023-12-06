@@ -1,10 +1,17 @@
 const Keyv = require('keyv'); 
 const keyv = new Keyv();
 
-exports.set = (key, value, ttl = undefined) => keyv.set(key, value, ttl);
+const set = (key, value, ttl = undefined) => keyv.set(key, value, ttl);
 
-exports.get = (key) => keyv.get(key); 
+const get = (key) => keyv.get(key);
 
-exports.del = (key) => keyv.delete(key);
+const del = (key) => keyv.delete(key);
 
-exports.clear = () => keyv.clear();
+const clear = () => keyv.clear();
+
+module.exports = {
+    set,
+    get,
+    del,
+    clear,
+}
