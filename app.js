@@ -7,6 +7,8 @@ require('dotenv').config();
 const indexRouter = require('./src/routes/auth.routes.js');
 const quotesRouter = require('./src/routes/quotes.routes.js');
 const articleRouter = require('./src/routes/article.routes.js');
+const meditationRouter = require('./src/routes/meditation.routes.js');
+
 
 const app = express();
 
@@ -23,13 +25,14 @@ const hostname = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
 app.use('/auth', indexRouter);
 app.use('/v1', quotesRouter);
 app.use('/v2', articleRouter);
+app.use('/v3', meditationRouter);
 
 app.listen(port, hostname, async (error) => {
-    if (error) {
-      console.log(`Error: ${error.message}`);
-  
-      return;
-    }
-  
-    console.log(`Listening on ${hostname}:${port}`);
+  if (error) {
+    console.log(`Error: ${error.message}`);
+
+    return;
+  }
+
+  console.log(`Listening on ${hostname}:${port}`);
 });

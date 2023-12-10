@@ -37,3 +37,17 @@ VALUES ('Kesehatan Mental dan Kesejahteraan Hidup', 'General', 'unicef.org', 'ht
        ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
        ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
        ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+
+//Menambah data kedalam table meditation
+CREATE TABLE meditation (
+    meditation_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    category VARCHAR(255),
+    title VARCHAR(255),
+    duration TIME,
+    type VARCHAR(255),
+    photoUrl VARCHAR(255)
+);
+
+INSERT INTO meditation (category, title, duration, type, photoUrl)
+VALUES ('Mindfullness', 'Mindfull Breathing Session', 00:05:00, 'Audio', 'Photo_to_Url'),
+VALUES ('Metta', 'Heartfelt Embrace', 00:06:30, 'Audio', 'Photo_to_Url')
