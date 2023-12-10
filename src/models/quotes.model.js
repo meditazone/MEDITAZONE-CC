@@ -7,7 +7,10 @@ const Quotes = sequelize.define('Quotes', {
     },
     author: {
         type: DataTypes.STRING 
-    }
+    },
+    imageUrl: {
+        type: DataTypes.STRING, 
+    },
 }, {
     timestamps: false,
 });

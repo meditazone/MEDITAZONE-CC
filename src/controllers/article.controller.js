@@ -1,12 +1,12 @@
-const quotesService = require('../services/quotes.service');
+const articleService = require('../services/article.service');
 
-const getAllQuotesController = async (req, res) => {
+const getAllArticle = async (req, res) => {
     try {
-        const quotes = await quotesService.getAllQuotes();
+        const article = await articleService.getAllArticle();
         
         return res.json({
-            message: 'Success GET All Quotes.',
-            data: quotes,
+            message: 'Success GET All Article.',
+            data: article,
         });
     } catch (error) {
         console.error('Error fetching quotes:', error);
@@ -16,20 +16,20 @@ const getAllQuotesController = async (req, res) => {
     }
 };
 
-const getQuoteByIdController = async (req, res) => {
+const getArticleById = async (req, res) => {
     try {
         const { id } = req.params;
-        const quote = await quotesService.getQuoteById(id);
+        const article = await articleService.getArticleById(id);
 
-        if (!quote) {
+        if (!article) {
             return res.status(404).json({
-                message: 'Quote not found.',
+                message: 'Article not found.',
             });
         }
 
         return res.json({
-            message: 'Success GET Quote By ID.',
-            data: quote,
+            message: 'Success GET Article By ID.',
+            data: article,
         });
     } catch (error) {
         console.error('Error fetching quote by ID:', error);
@@ -40,6 +40,6 @@ const getQuoteByIdController = async (req, res) => {
 };
 
 module.exports = {
-    getAllQuotesController,
-    getQuoteByIdController,
-};
+    getAllArticle,
+    getArticleById,
+}

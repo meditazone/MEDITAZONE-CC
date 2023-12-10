@@ -5,7 +5,8 @@ const logger = require('morgan');
 require('dotenv').config();
 
 const indexRouter = require('./src/routes/auth.routes.js');
-const quotesRouter = require('./src/routes/quotes.routes.js')
+const quotesRouter = require('./src/routes/quotes.routes.js');
+const articleRouter = require('./src/routes/article.routes.js');
 
 const app = express();
 
@@ -21,6 +22,7 @@ const hostname = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
 
 app.use('/auth', indexRouter);
 app.use('/v1', quotesRouter);
+app.use('/v2', articleRouter);
 
 app.listen(port, hostname, async (error) => {
     if (error) {
