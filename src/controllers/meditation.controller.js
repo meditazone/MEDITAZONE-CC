@@ -39,7 +39,7 @@ const getMeditationByIdController = async (req, res) => {
     }
 };
 
-const getMeditationsByCategoryController = async (req, res) => {
+const getMeditationByCategoryController = async (req, res) => {
     try {
         const { category } = req.params;
         const meditation = await meditationService.getMeditationsByCategory(category);
@@ -65,5 +65,5 @@ const getMeditationsByCategoryController = async (req, res) => {
 module.exports = {
     getAllMeditationController,
     getMeditationByIdController,
-    getMeditationsByCategoryController
+    getMeditationByCategoryController
 }

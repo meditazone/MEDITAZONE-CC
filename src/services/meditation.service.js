@@ -1,5 +1,3 @@
-// File: meditation.service.js
-
 const meditationModel = require('../models/meditation.model');
 
 const getAllMeditation = async () => {
@@ -22,12 +20,12 @@ const getMeditationById = async (id) => {
 
 const getMeditationsByCategory = async (category) => {
     try {
-        const meditations = await meditationModel.findAll({
+        const meditation = await meditationModel.findAll({
             where: {
                 category: category,
             },
         });
-        return meditations;
+        return meditation;
     } catch (error) {
         throw error;
     }

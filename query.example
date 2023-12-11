@@ -45,9 +45,10 @@ CREATE TABLE meditation (
     title VARCHAR(255),
     duration TIME,
     type VARCHAR(255),
-    photoUrl VARCHAR(255)
+    thumbnail VARCHAR(255),
+    backgroundCard VARCHAR(255),
+    background_MediaPlayer VARCHAR(255)
 );
 
-INSERT INTO meditation (category, title, duration, type, photoUrl)
-VALUES ('Mindfullness', 'Mindfull Breathing Session', 00:05:00, 'Audio', 'Photo_to_Url'),
-VALUES ('Metta', 'Heartfelt Embrace', 00:06:30, 'Audio', 'Photo_to_Url')
+INSERT INTO `meditations`(`meditation_id`, `category`, `title`, `duration`, `type`, `thumbnail`, `backgroundCard`, `background_MediaPlayer`) 
+VALUES (NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url]')

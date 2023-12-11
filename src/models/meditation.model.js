@@ -23,10 +23,18 @@ const meditation = sequelize.define('meditation', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    photoUrl: {
+    thumbnail: {
         type: DataTypes.STRING,
         allowNull: false
     },
+    backgroundCard: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    background_MediaPlayer: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
 }, {
     timestamps: false,
 });
