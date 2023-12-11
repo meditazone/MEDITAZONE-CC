@@ -1,0 +1,39 @@
+-- QUERY FOR CREATE TABLE USER
+
+CREATE TABLE user (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  email VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  password VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT NULL,
+  updated_at TIMESTAMP NULL DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE quotes (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    quotes TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Quotes (quote, author, imageUrl) 
+VALUES ('Berjanjilah padaku, kamu akan selalu ingat - kamu lebih berani dari yang kamu yakini, dan lebih kuat dari yang kamu kira, dan lebih pintar dari yang kamu pikirkan', 'Christopher Robin', 'https://storage.googleapis.com/meditazone-app/bg_quote_img/background_quote.png');
+
+//Menambah data kedalam table article
+INSERT INTO article (title, category, author, thumbnail, article_url)
+VALUES ('Kesehatan Mental dan Kesejahteraan Hidup', 'General', 'unicef.org', 'https://storage.googleapis.com/app-meditazone/Images/article/unicef.jpg', 'https://www.unicef.org/indonesia/id/kesehatan-mental'),
+       ('Apa itu Kesehatan Mental, Gejala & Penyebab', 'General', 'halodoc.com | dr.Rizal Fadli', 'https://storage.googleapis.com/app-meditazone/Images/article/halodoc.jpg', 'https://www.halodoc.com/kesehatan/kesehatan-mental'),
+       ('Mengenal Pentingnya Kesehatan Mental pada Remaja', 'General', 'yankes.kemkes.go.id | Elsa Savitrie', 'https://storage.googleapis.com/app-meditazone/Images/article/kemkes.png', 'https://yankes.kemkes.go.id/view_artikel/362/mengenal-pentingnya-kesehatan-mental-pada-remaja');
+       ('Memahami Kesehatan Mental dan Cara Menjaganya', 'General', 'alodokter.com | dr. Airindya Bella', 'https://storage.googleapis.com/app-meditazone/Images/article/alodokter.jpg', 'https://www.alodokter.com/cari-tahu-informasi-seputar-kesehatan-mental-di-sini');
+       ('Bagaimana gangguan kecemasan pada masa kecil dan remaja berdampak saat kita dewasa? Ini kata riset terbaru', 'Anxiety', 'theconversation.com | Maro Violato, Jack Pollard, Tessa Reardon', 'https://storage.googleapis.com/app-meditazone/Images/article/theconversation.avif', 'https://theconversation.com/bagaimana-gangguan-kecemasan-pada-masa-kecil-dan-remaja-berdampak-saat-kita-dewasa-ini-kata-riset-terbaru-20750');
+       ('11 Cara Mengatasi Depresi, Bisa Rutin Dilakukan!', 'Depresi', 'health.detik.com | Fithria Pratiwi', 'https://storage.googleapis.com/app-meditazone/Images/article/health.detik.jpeg', 'https://health.detik.com/berita-detikhealth/d-4610102/11-cara-mengatasi-depresi-bisa-rutin-dilakukan');
+       ('Depresi:Gejala, Penyebab, Pengobatan, Pencegahan', 'Depresi', 'honestdocs.id | dr. Ahmad Muhlisin', 'https://storage.googleapis.com/app-meditazone/Images/article/honestdocs.webp', 'https://www.honestdocs.id/depresi');
+       ('Tips Cegah Depresi pada Remaja', 'Depresi', 'klikdokter.com | Bobby Agung Prasetyo', 'https://storage.googleapis.com/app-meditazone/Images/article/klikdokter.webp', 'https://www.klikdokter.com/psikologi/kesehatan-mental/tips-cegah-depresi-pada-remaja');
+       ('Era Modern: Kasus Depresi pada Anak Remaja Meningkat', 'Depresi', 'hellosehat.com | dr. Lahargo Kembaren, Sp. KJ', 'https://storage.googleapis.com/app-meditazone/Images/article/hallosehat2.webp', 'https://hellosehat.com/parenting/remaja/kesehatan-mental-remaja/depresi-anak-remaja/');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');

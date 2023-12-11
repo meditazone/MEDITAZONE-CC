@@ -11,7 +11,6 @@ const signUp = async (req, res) => {
                 message: 'Password and confirmation password do not match.'
             });
         }
-        
         const isExist = await AuthService.findUserByEmail(req.body.email);
         if (isExist) {
             return res.status(400).json({
@@ -47,7 +46,8 @@ const signIn = async (req, res) => {
         if (user) {
             const isMatched = await bcryptUtil.compareHash(req.body.password, user.password);
             if (isMatched) {
-                const token = await jwtUtil.createToken({ id: user.id });
+                const userData = { id: user.id, name: user.name, email: user.email };
+                const token = await jwtUtil.createToken({ userData });
 
                 return res.status(200).json({
                     message: 'Login successfully.',
