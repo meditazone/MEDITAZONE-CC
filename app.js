@@ -7,6 +7,7 @@ require('dotenv').config();
 const indexRouter = require('./src/routes/auth.routes.js');
 const quotesRouter = require('./src/routes/quotes.routes.js');
 const articleRouter = require('./src/routes/article.routes.js');
+const userRouter = require('./src/routes/user.routes.js');
 
 const app = express();
 
@@ -14,15 +15,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/images')));
 
 
 const port = process.env.PORT || 8080;
 const hostname = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0';
 
 app.use('/auth', indexRouter);
+app.use('/user', userRouter);
 app.use('/v1', quotesRouter);
 app.use('/v2', articleRouter);
+
 
 app.listen(port, hostname, async (error) => {
     if (error) {

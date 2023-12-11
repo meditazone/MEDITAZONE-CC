@@ -11,7 +11,6 @@ const signUp = async (req, res) => {
                 message: 'Password and confirmation password do not match.'
             });
         }
-        
         const isExist = await AuthService.findUserByEmail(req.body.email);
         if (isExist) {
             return res.status(400).json({
