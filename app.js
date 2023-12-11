@@ -8,6 +8,8 @@ const indexRouter = require('./src/routes/auth.routes.js');
 const quotesRouter = require('./src/routes/quotes.routes.js');
 const articleRouter = require('./src/routes/article.routes.js');
 const userRouter = require('./src/routes/user.routes.js');
+const meditationRouter = require('./src/routes/meditation.routes.js');
+
 
 const app = express();
 
@@ -25,14 +27,15 @@ app.use('/auth', indexRouter);
 app.use('/user', userRouter);
 app.use('/v1', quotesRouter);
 app.use('/v2', articleRouter);
+app.use('/v3', meditationRouter);
 
 
 app.listen(port, hostname, async (error) => {
-    if (error) {
-      console.log(`Error: ${error.message}`);
-  
-      return;
-    }
-  
-    console.log(`Listening on ${hostname}:${port}`);
+  if (error) {
+    console.log(`Error: ${error.message}`);
+
+    return;
+  }
+
+  console.log(`Listening on ${hostname}:${port}`);
 });
