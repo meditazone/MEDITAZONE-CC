@@ -38,8 +38,8 @@ VALUES ('Kesehatan Mental dan Kesejahteraan Hidup', 'General', 'unicef.org', 'ht
        ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
        ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
 
-//Menambah data kedalam table meditation
-CREATE TABLE meditation (
+//Menambah data kedalam table meditations
+CREATE TABLE meditations (
     meditation_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     category VARCHAR(255),
     title VARCHAR(255),
@@ -47,8 +47,25 @@ CREATE TABLE meditation (
     type VARCHAR(255),
     thumbnail VARCHAR(255),
     backgroundCard VARCHAR(255),
-    background_MediaPlayer VARCHAR(255)
+    background_MediaPlayer VARCHAR(255),
+    audioUrl VARCHAR(225)
 );
 
-INSERT INTO `meditations`(`meditation_id`, `category`, `title`, `duration`, `type`, `thumbnail`, `backgroundCard`, `background_MediaPlayer`) 
-VALUES (NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url]')
+//Menambah data ke dalam tabel meditations
+INSERT INTO `meditations`(`meditation_id`, `category`, `title`, `duration`, `type`, `thumbnail`, `backgroundCard`, `background_MediaPlayer`, `audioUrl`) 
+VALUES 
+(NULL,'Breath Awareness','Breath as a Path to Tranquility','00:09:07','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Breathe%20as%20a%20Path%20to%20Tranquility.mp3'),
+(NULL,'Breath Awareness','Breathing for Inner Peace','00:08:05','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Breathing%20for%20Inner%20Peace.mp3'),
+(NULL,'Breath Awareness','Deep and Calming Breaths','00:06:53','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Deep%20and%20Calming%20Breaths.mp3'),
+(NULL,'Breath Awareness','Ethereal Breathwaves','00:14:53','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Ethereal%20Breathwaves.mp3'),
+(NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Zen%20Zephyrs.mp3'),
+(NULL,'Metta (Loving Kindness)','Body is Harmony of Loving-Kindness','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Body_s%20Harmony%20of%20Loving-Kindness.mp3'),
+(NULL,'Metta (Loving Kindness)','Heartfelt Embrace','00:09:06','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Heartfelt%20Embrace.mp3'),
+(NULL,'Metta (Loving Kindness)','Loving Wishes For Others','00:12:42','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Loving%20Wishes%20For%20Others.mp3'),
+(NULL,'Metta (Loving Kindness)','Nurturing Love Within','00:05:16','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Nurturing%20Love%20Within.mp3'),
+(NULL,'Metta (Loving Kindness)','Serenading the Soul With Love','00:08:17','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Serenading%20The%20Soul%20With%20Love.mp3'),
+(NULL,'Mindfullness','Conscious Living Meditation','00:13:46','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Conscious%20Living%20Meditation.mp3'),
+(NULL,'Mindfullness','Mindful Breathing Session','00:21:37','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Mindful%20Breathing%20Session.mp3'),
+(NULL,'Mindfullness','Mindfulness in Daily Life','00:13:41','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Mindfulness%20in%20Daily%20Life.mp3'),
+(NULL,'Mindfullness','Present Moment Awareness','00:07:35','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Present%20Moment%20Awareness.mp3'),
+(NULL,'Mindfullness','Serenity Streams','00:14:08','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Serenity%20Streams.mp3');
