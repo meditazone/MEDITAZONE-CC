@@ -15,4 +15,10 @@ Welcome to the API documentation for the Meditazone-App. This API provides endpo
 | GET | /meditation/category/{category} | Retrieve Meditatioon Data by Category |
 | GET | /quotes | Retrieve All Quotes Data |
 | GET | /quotes/{id} | Retrieve Quotes Data by Id |
+| GET | /quotes/author/{Author} | Retrieve Qoutes Data by Author |
 | GET | /article | Retrieve All Article Data |
+| GET | /article/category/{category} | Retrieve Article Data by Category |
+| GET | /user/profile/allUsers | Retrieve All Users Data |
+| GET | /user/profile/2 | Retrieve User Data by Id |
+| PUT | /user/updateName/{id} | Update Name Data by Id |
+| PUT | /user/editPhotoProfile/{id} | Update Photo Profile Data by Id |
