@@ -7,8 +7,6 @@ router.get('/meditation/category/:category', meditationController.getMeditationB
 router.get('/meditation/:id', meditationController.getMeditationByIdController);
 router.get('/meditation', meditationController.getAllMeditationController);
 
-router.all('*', (req, res) => res.status(400).json({
-    message: 'Bad request!'
-}));
+router.all('*', (req, res) => res.status(400).json({ message: 'Bad request!' }));
 
 module.exports = router;

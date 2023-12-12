@@ -51,4 +51,4 @@ CREATE TABLE meditation (
 );
 
 INSERT INTO `meditations`(`meditation_id`, `category`, `title`, `duration`, `type`, `thumbnail`, `backgroundCard`, `background_MediaPlayer`) 
-VALUES (NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url]')
+VALUES (NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','Photo_to_Url','Photo_to_Url','Photo_to_Url');

@@ -17,7 +17,22 @@ const getArticleById = async (id) => {
         throw error;
     }
 };
+
+const getArticleByCategory = async (category) => {
+    try {
+        const article = await articleModel.findAll({
+            where: {
+                category: category,
+            },
+        });
+        return article;
+    } catch (error) {
+        throw error;
+    }
+};
+
 module.exports = {
     getAllArticle,
     getArticleById,
+    getArticleByCategory,
 }

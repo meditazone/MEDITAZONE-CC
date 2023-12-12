@@ -6,6 +6,7 @@ const articleController = require('../controllers/article.controller.js');
 
 router.get('/article', articleController.getAllArticle);
 router.get('/article/:id', articleController.getArticleById);
+router.get('/article/category/:category', articleController.getArticleByCategory);
 
 router.all('*',  (req, res) => res.status(400).json({ message: 'Bad Request.'}));
 

@@ -7,6 +7,7 @@ const { errorMonitor } = require('keyv');
 
 router.get('/quotes', quoteController.getAllQuotesController);
 router.get('/quotes/:id', quoteController.getQuoteByIdController);
+router.get('/quotes/author/:author', quoteController.getQuoteByAuthorController);
 
 router.all('*',  (req, res) => res.status(400).json({ message: 'Bad Request.'}))
 

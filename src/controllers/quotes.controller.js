@@ -39,7 +39,31 @@ const getQuoteByIdController = async (req, res) => {
     }
 };
 
+const getQuoteByAuthorController = async (req, res) => {
+    try {
+        const { author } = req.params;
+        const quote = await quotesService.getQuoteByAuthor(author);
+
+        if (!quote) {
+            return res.status(404).json({
+                message: 'Quote not found.'
+            });
+        }
+
+        return res.status(200).json({
+            message: 'Success GET Quote by Author',
+            data: quote,
+        });
+    } catch (error) {
+        console.error('Error fetching', error);
+        return res.status(500).json({
+            message: 'Error fetching quote by author'
+        });
+    }
+};
+
 module.exports = {
     getAllQuotesController,
     getQuoteByIdController,
+    getQuoteByAuthorController,
 };
