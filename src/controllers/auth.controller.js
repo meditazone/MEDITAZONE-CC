@@ -29,8 +29,8 @@ const signUp = async (req, res) => {
         const user = await AuthService.createUser(userData);
 
         return res.status(201).json({
-            data: user,
-            message: 'User registered successfully.'
+            message: 'User registered successfully.',
+            data: user
         });
     } catch (error) {
         console.error('Error during user registration:', error);
@@ -46,7 +46,7 @@ const signIn = async (req, res) => {
         if (user) {
             const isMatched = await bcryptUtil.compareHash(req.body.password, user.password);
             if (isMatched) {
-                const userData = { id: user.id, name: user.name, email: user.email };
+                const userData = { id: user.id, name: user.name };
                 const token = await jwtUtil.createToken({ userData });
 
                 return res.status(200).json({

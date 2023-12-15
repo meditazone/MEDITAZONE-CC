@@ -9,6 +9,7 @@ const quotesRouter = require('./src/routes/quotes.routes.js');
 const articleRouter = require('./src/routes/article.routes.js');
 const userRouter = require('./src/routes/user.routes.js');
 const meditationRouter = require('./src/routes/meditation.routes.js');
+const favoriteRouter = require('./src/routes/favorite.routes.js');
 
 
 const app = express();
@@ -28,6 +29,7 @@ app.use('/user', userRouter);
 app.use('/v1', quotesRouter);
 app.use('/v2', articleRouter);
 app.use('/v3', meditationRouter);
+app.use('/v4', favoriteRouter);
 
 
 app.listen(port, hostname, async (error) => {

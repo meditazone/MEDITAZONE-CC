@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./connection');
 
 const User = sequelize.define('User', {
-    userID: {
+    user_ID: {
         type: DataTypes.INTEGER, 
         primaryKey: true,
         autoIncrement: true,
@@ -10,7 +10,7 @@ const User = sequelize.define('User', {
     name: {
         type: DataTypes.STRING 
     },
-    email: {
+    email: {    
         type: DataTypes.STRING 
     },
     password: {

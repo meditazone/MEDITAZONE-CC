@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./connection');
 
 const article = sequelize.define('article', {
-    article_id: {
+    article_ID: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,

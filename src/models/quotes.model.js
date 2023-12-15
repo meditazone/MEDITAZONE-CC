@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('./connection');
 
 const Quotes = sequelize.define('Quotes', {
+    quote_ID: {
+        type: DataTypes.INTEGER, 
+        primaryKey: true,
+        autoIncrement: true,
+    },
     quote: {
         type: DataTypes.STRING 
     },
