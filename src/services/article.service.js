@@ -2,8 +2,10 @@ const articleModel = require('../models/article.model');
 
 const getAllArticle = async () => {
     try {
-        const article = await articleModel.findAll();
-        return article;
+        const articles = await articleModel.findAll({
+            order: [['article_id', 'ASC']], 
+        });
+        return articles;
     } catch (error) {
         throw error;
     }

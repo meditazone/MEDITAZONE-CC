@@ -6,7 +6,7 @@ const Meditation = require('./meditation.model');
 const Quotes = require('./quotes.model');
 const User = require('./user.model');
 
-const Favorite = sequelize.define('Favorite', {
+const Favorite = sequelize.define('favorites', {
     favorite_ID: {
         type: DataTypes.UUID,
         primaryKey: true,
