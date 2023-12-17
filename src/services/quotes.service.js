@@ -2,7 +2,9 @@ const quotesModel = require('../models/quotes.model');
 
 const getAllQuotes = async () => {
     try {
-        const quotes = await quotesModel.findAll();
+        const quotes = await quotesModel.findAll({
+            order: [['quote_id', 'ASC']], 
+        });
         return quotes;
     } catch (error) {
         throw error;
