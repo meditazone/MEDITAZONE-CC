@@ -7,7 +7,7 @@ Welcome to the API documentation for the Meditazone-App. This API provides endpo
 If you want to run this API Server on your local machine, you need to do this steps:
 - First, clone this repository using this command: `git clone https://github.com/meditazone/MEDITAZONE-CC.git`.
 - Second, open your terminal and go to your project's root directory.
-- Third, type `npm install` on your terminal and hit `Enter`.
+- Third, type `npm install` or `yarn install` on your terminal and hit `Enter`.
 - Fourth, type `npm i yarn` on your terminal and hit `Enter`.
 - Fifth, type `yarn dev` on your terminal and hit `Enter`.
 - Finally, the server will run on your http://localhost:8080
