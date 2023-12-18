@@ -1,0 +1,71 @@
+-- QUERY FOR CREATE TABLE USER
+
+CREATE TABLE user (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  email VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  password VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT NULL,
+  updated_at TIMESTAMP NULL DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE quotes (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    quotes TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Quotes (quote, author, imageUrl) 
+VALUES ('Berjanjilah padaku, kamu akan selalu ingat - kamu lebih berani dari yang kamu yakini, dan lebih kuat dari yang kamu kira, dan lebih pintar dari yang kamu pikirkan', 'Christopher Robin', 'https://storage.googleapis.com/meditazone-app/bg_quote_img/background_quote.png');
+
+//Menambah data kedalam table article
+INSERT INTO article (title, category, author, thumbnail, article_url)
+VALUES ('Kesehatan Mental dan Kesejahteraan Hidup', 'General', 'unicef.org', 'https://storage.googleapis.com/app-meditazone/Images/article/unicef.jpg', 'https://www.unicef.org/indonesia/id/kesehatan-mental'),
+       ('Apa itu Kesehatan Mental, Gejala & Penyebab', 'General', 'halodoc.com | dr.Rizal Fadli', 'https://storage.googleapis.com/app-meditazone/Images/article/halodoc.jpg', 'https://www.halodoc.com/kesehatan/kesehatan-mental'),
+       ('Mengenal Pentingnya Kesehatan Mental pada Remaja', 'General', 'yankes.kemkes.go.id | Elsa Savitrie', 'https://storage.googleapis.com/app-meditazone/Images/article/kemkes.png', 'https://yankes.kemkes.go.id/view_artikel/362/mengenal-pentingnya-kesehatan-mental-pada-remaja');
+       ('Memahami Kesehatan Mental dan Cara Menjaganya', 'General', 'alodokter.com | dr. Airindya Bella', 'https://storage.googleapis.com/app-meditazone/Images/article/alodokter.jpg', 'https://www.alodokter.com/cari-tahu-informasi-seputar-kesehatan-mental-di-sini');
+       ('Bagaimana gangguan kecemasan pada masa kecil dan remaja berdampak saat kita dewasa? Ini kata riset terbaru', 'Anxiety', 'theconversation.com | Maro Violato, Jack Pollard, Tessa Reardon', 'https://storage.googleapis.com/app-meditazone/Images/article/theconversation.avif', 'https://theconversation.com/bagaimana-gangguan-kecemasan-pada-masa-kecil-dan-remaja-berdampak-saat-kita-dewasa-ini-kata-riset-terbaru-20750');
+       ('11 Cara Mengatasi Depresi, Bisa Rutin Dilakukan!', 'Depresi', 'health.detik.com | Fithria Pratiwi', 'https://storage.googleapis.com/app-meditazone/Images/article/health.detik.jpeg', 'https://health.detik.com/berita-detikhealth/d-4610102/11-cara-mengatasi-depresi-bisa-rutin-dilakukan');
+       ('Depresi:Gejala, Penyebab, Pengobatan, Pencegahan', 'Depresi', 'honestdocs.id | dr. Ahmad Muhlisin', 'https://storage.googleapis.com/app-meditazone/Images/article/honestdocs.webp', 'https://www.honestdocs.id/depresi');
+       ('Tips Cegah Depresi pada Remaja', 'Depresi', 'klikdokter.com | Bobby Agung Prasetyo', 'https://storage.googleapis.com/app-meditazone/Images/article/klikdokter.webp', 'https://www.klikdokter.com/psikologi/kesehatan-mental/tips-cegah-depresi-pada-remaja');
+       ('Era Modern: Kasus Depresi pada Anak Remaja Meningkat', 'Depresi', 'hellosehat.com | dr. Lahargo Kembaren, Sp. KJ', 'https://storage.googleapis.com/app-meditazone/Images/article/hallosehat2.webp', 'https://hellosehat.com/parenting/remaja/kesehatan-mental-remaja/depresi-anak-remaja/');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+       ('Judul Artikel 3', 'Olahraga', 'Penulis 3', 'thumbnail3.jpg', 'http://example.com/artikel3');
+
+//Membuattable meditations
+CREATE TABLE meditations (
+    meditation_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    category VARCHAR(255),
+    title VARCHAR(255),
+    duration TIME,
+    type VARCHAR(255),
+    thumbnail VARCHAR(255),
+    backgroundCard VARCHAR(255),
+    background_MediaPlayer VARCHAR(255),
+    audioUrl VARCHAR(225)
+);
+
+//Menambah data kedalam table meditations
+INSERT INTO `meditations`(`meditation_id`, `category`, `title`, `duration`, `type`, `thumbnail`, `backgroundCard`, `background_MediaPlayer`, `audioUrl`) 
+VALUES 
+(NULL,'Breath Awareness','Breath as a Path to Tranquility','00:09:07','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Tumbnail/Breathe%20as%20a%20Path%20to%20Tranquility_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Card/Breathe%20as%20a%20Path%20to%20Tranquility_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Player/Breathe%20as%20a%20Path%20to%20Tranquility_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Breathe%20as%20a%20Path%20to%20Tranquility.mp3'),
+(NULL,'Breath Awareness','Breathing for Inner Peace','00:08:05','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Tumbnail/Breathing%20for%20Inner%20Peace_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Card/Breathing%20for%20Inner%20Peace_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Player/Breathing%20for%20Inner%20Peace_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Breathing%20for%20Inner%20Peace.mp3'),
+(NULL,'Breath Awareness','Deep and Calming Breaths','00:06:53','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Tumbnail/Deep%20and%20Calming%20Breaths_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Card/Deep%20and%20Calming%20Breaths_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Player/Deep%20and%20Calming%20Breaths_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Deep%20and%20Calming%20Breaths.mp3'),
+(NULL,'Breath Awareness','Ethereal Breathwaves','00:14:53','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Tumbnail/Ethereal%20Breathwaves_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Card/Ethereal%20Breathwaves_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Player/Ethereal%20Breathwaves_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Ethereal%20Breathwaves.mp3'),
+(NULL,'Breath Awareness','Zen Zephyrs','00:12:14','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Tumbnail/Zen%20Zephyrs_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Card/Zen%20Zephyrs_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Breath%20Awerness/Background_Player/Zen%20Zephyrs_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Breath%20Awareness/Zen%20Zephyrs.mp3'),
+(NULL,'Loving Kindness','Body is Harmony of Loving-Kindness','00:12:14','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Tumbnail/Body_s%20Harmony%20of%20Loving-Kindness_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Card/Body_s%20Harmony%20of%20Loving-Kindness_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Player/Body_s%20Harmony%20of%20Loving-Kindness_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Body_s%20Harmony%20of%20Loving-Kindness.mp3'),
+(NULL,'Loving Kindness','Heartfelt Embrace','00:09:06','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Tumbnail/Heartfelt%20Embrace_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Card/Body_s%20Harmony%20of%20Loving-Kindness_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Player/Heartfelt%20Embrace_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Heartfelt%20Embrace.mp3'),
+(NULL,'Loving Kindness','Loving Wishes For Others','00:12:42','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Tumbnail/Loving%20Wishes%20For%20Others_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Card/Loving%20Wishes%20For%20Others_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Player/Loving%20Wishes%20For%20Others_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Loving%20Wishes%20For%20Others.mp3'),
+(NULL,'Loving Kindness','Nurturing Love Within','00:05:16','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Tumbnail/Nurturing%20Love%20Within_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Card/Nurturing%20Love%20Within_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Player/Nurturing%20Love%20Within_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Nurturing%20Love%20Within.mp3'),
+(NULL,'Loving Kindness','Serenading','00:08:17','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Tumbnail/Serenading%20The%20Soul%20With%20Love_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Card/Serenading%20The%20Soul%20With%20Love_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Loving-Kindness/Background_Player/Serenading%20The%20Soul%20With%20Love_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Metta%20(Loving-Kindness)/Serenading%20The%20Soul%20With%20Love.mp3'),
+(NULL,'Mindfullness','Conscious Living Meditation','00:13:46','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Tumbnail/Conscious%20Living%20Meditation_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Card/Conscious%20Living%20Meditation_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Player/Conscious%20Living%20Meditation_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Conscious%20Living%20Meditation.mp3'),
+(NULL,'Mindfullness','Mindful Breathing Session','00:21:37','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Tumbnail/Mindful%20Breathing%20Session_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Card/Mindful%20Breathing%20Session_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Player/Mindful%20Breathing%20Session_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Mindful%20Breathing%20Session.mp3'),
+(NULL,'Mindfullness','Mindfulness in Daily Life','00:13:41','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Tumbnail/Mindfulness%20in%20Daily%20Life_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Card/Mindfulness%20in%20Daily%20Life_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Player/Mindfulness%20in%20Daily%20Life_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Mindfulness%20in%20Daily%20Life.mp3'),
+(NULL,'Mindfullness','Present Moment Awareness','00:07:35','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Tumbnail/Present%20Moment%20Awareness_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Card/Present%20Moment%20Awareness_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Player/Present%20Moment%20Awareness_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Present%20Moment%20Awareness.mp3'),
+(NULL,'Mindfullness','Serenity Streams','00:14:08','Audio','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Tumbnail/Serenity%20Streams_Tumbnail.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Card/Serenity%20Streams_Background_Card.png','https://storage.googleapis.com/app-meditazone/Images/meditation/Mindfullness/Background_Player/Serenity%20Streams_Background_Player.png', 'https://storage.googleapis.com/app-meditazone/audio/Mindfullness/Serenity%20Streams.mp3');
