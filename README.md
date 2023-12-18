@@ -10,7 +10,7 @@ If you want to run this API Server on your local machine, you need to do this st
 - Third, type `npm install` or `yarn install` on your terminal and hit `Enter`.
 - Fourth, type `npm i yarn` on your terminal and hit `Enter`.
 - Fifth, type `yarn dev` on your terminal and hit `Enter`.
-- Finally, the server will run on your http://localhost:8080
+- Finally, the server will run on your `http://localhost:8080`
 
 ## API Endpoint
 If you want to access our API endpoints, you must have already cloned this repository and completed the previous steps. If you have, you can see several API endpoints below and implement them. Here are the API endpoints along with their descriptions:
