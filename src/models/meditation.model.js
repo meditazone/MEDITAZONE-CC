@@ -27,6 +27,10 @@ const meditation = sequelize.define('meditation', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    audioURL: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     backgroundCard: {
         type: DataTypes.STRING,
         allowNull: false

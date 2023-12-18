@@ -4,8 +4,7 @@ FROM node:${NODE_VERSION}-alpine
 
 # FROM gcr.io/cloud-builders/gcloud
 
-RUN mkdir -p /src/app
-WORKDIR /src/app
+WORKDIR /app
 
 # Salin package.json dan yarn.lock ke dalam direktori kerja
 COPY package.json yarn.lock ./
