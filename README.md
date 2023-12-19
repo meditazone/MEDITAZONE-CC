@@ -3,13 +3,7 @@
 ## Description
 Welcome to the API documentation for the Meditazone-App. This API provides endpoints for user authentication, meditation data retrieval, quotes, and articles related to meditation and mindfulness.
 
-[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
-  Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).
-
-  [![NPM Version][npm-version-image]][npm-url]
-  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
-  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
 
 
@@ -62,3 +56,13 @@ If you want to access our API endpoints, you must have already cloned this repos
 
 ```
 
+
+
+
+[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+
+  Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).
+
+  [![NPM Version][npm-version-image]][npm-url]
+  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
+  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
