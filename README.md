@@ -38,11 +38,11 @@ If you want to access our API endpoints, you must have already cloned this repos
 | GET | /v3/meditation | Retrieve All Meditation Data |
 | Get | /v3/meditation/{id} | Retrieve Meditation Data by Id |
 | GET | /v3/meditation/category/{category} | Retrieve Meditatioon Data by Category |
-| POST | /favorite/ |  |
+| POST | /favorite/ | Entry Favorite Data |
 | PUT | /favorite/{userId}/{favoriteId} | Update Favorite Data |
 | DELETE | /favorite/{userId}/{favoriteId} | Delete Favorite Data |
 | GET | /favorite/{userId} | Retrieve Favorite Data by Id |
-| GET | /favorite | Retrieve Favorite Data |
+| GET | /favorite/ | Retrieve Favorite Data |
 
 
 ## Example For Using API in Localhost
