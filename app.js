@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
 
-const indexRouter = require('./src/routes/auth.routes.js');
+const authRouter = require('./src/routes/auth.routes.js');
 const quotesRouter = require('./src/routes/quotes.routes.js');
 const articleRouter = require('./src/routes/article.routes.js');
 const userRouter = require('./src/routes/user.routes.js');
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public/images')));
 const port = process.env.PORT || 8080;
 const hostname = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0';
 
-app.use('/auth', indexRouter);
+app.use('/auth', authRouter);
 app.use('/user', userRouter);
 app.use('/v1', quotesRouter);
 app.use('/v2', articleRouter);
