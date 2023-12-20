@@ -3,7 +3,6 @@ const meditationModel = require('../models/meditation.model');
 const getAllMeditation = async () => {
     try {
         const meditation = await meditationModel.findAll({
-            order: [['meditation_ID', 'ASC']], 
         });
         return meditation;
     } catch (error) {
